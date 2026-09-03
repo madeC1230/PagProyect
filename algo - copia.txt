@@ -1,3 +1,0 @@
-hola mundo
-Estoy aprendiendo a 
-Hoy practica de ramas en repositorio local
