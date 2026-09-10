@@ -8,8 +8,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   const errorMessage = document.getElementById('errorMessage');
 
   // ===== CREDENCIALES (para prototipo) =====
-  const USUARIO_VALIDO = 'admin';
-  const PASSWORD_VALIDA = 'admin123';
+  const USUARIO_VALIDO = 'jeremy';
+  const PASSWORD_VALIDA = '1234';
 
   // Validar
   if (usuario === USUARIO_VALIDO && password === PASSWORD_VALIDA) {
