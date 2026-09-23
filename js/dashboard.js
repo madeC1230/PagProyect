@@ -1,5 +1,5 @@
 // =========================
-// FECHA Y HORA
+// FECHA Y HORA actual es la fecha
 // =========================
 
 function actualizarHora() {
@@ -27,9 +27,9 @@ setInterval(actualizarHora, 1000);
 
 
 
-// =========================
+
 // GRÁFICA DE CONSUMO
-// =========================
+
 
 const ctx = document.getElementById("graficaConsumo");
 
