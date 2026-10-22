@@ -1,0 +1,40 @@
+
+name: Verify HTML and CSS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Verificar que exista index.html
+      - name: Verify index.html
+        run: |
+          echo "Verificando index.html..."
+          test -f index.html
+          echo "index.html encontrado."
+
+      # Verificar que exista styles.css
+      - name: Verify styles.css
+        run: |
+          echo "Verificando styles.css..."
+          test -f styles/styles.css
+          echo "styles.css encontrado."
+
+      # Verificar la referencia al archivo CSS
+      - name: Verify HTML structure
+        run: |
+          echo "Verificando referencia a styles.css..."
+          grep -q 'styles/styles.css' index.html
+          echo "Referencia a styles.css encontrada."
+

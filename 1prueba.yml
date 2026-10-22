@@ -1,13 +1,7 @@
-
-name: Verify HTML and CSS
-
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
-      - main
+    - main
 
 jobs:
   test:
@@ -15,26 +9,34 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+      # github.com/actions en checkout es para
+        uses: actions/checkout@v7
 
-      # Verificar que exista index.html
+# test Evalu una condicion y -f Comprueba que la ruta exista
       - name: Verify index.html
         run: |
           echo "Verificando index.html..."
           test -f index.html
-          echo "index.html encontrado."
+          echo "Index.html encontrado."
 
-      # Verificar que exista styles.css
       - name: Verify styles.css
         run: |
           echo "Verificando styles.css..."
           test -f styles/styles.css
-          echo "styles.css encontrado."
+          echo "styles.css econtrado."
 
-      # Verificar la referencia al archivo CSS
       - name: Verify HTML structure
         run: |
+          echo "Verificando estructura HTML..."
+
+          grep -qi "<html" index.html
+          grep -qi "<head" index.html
+          grep -qi "<body" index.html
+
+          echo "Estructura HTML basica correcta."
+# grep -q Busca un texto y comunica si lo encontre mediante un 
+      - name: Verefy CSS reference
+        run: | 
           echo "Verificando referencia a styles.css..."
           grep -q 'styles/styles.css' index.html
-          echo "Referencia a styles.css encontrada."
-
+          echo "referencia a styles.css encontrada."
