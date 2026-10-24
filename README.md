@@ -87,3 +87,5 @@ Proyecto académico con fines educativos.proyecto
 Este proyecto consiste en una interfaz web que cuenta con una pantalla de inicio de sesión y un panel de control con un diseño moderno. Su objetivo es presentar información de manera organizada mediante tarjetas, tablas y diferentes secciones visuales.
 
 El diseño utiliza colores oscuros, fondos claros, efectos visuales y elementos adaptables a diferentes tamaños de pantalla.
+
+subiemdo campios para la practica 
