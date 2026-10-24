@@ -19,7 +19,7 @@ function actualizarHora() {
         fecha + " " + hora;
 
 }
-
+ 
 
 actualizarHora();
 

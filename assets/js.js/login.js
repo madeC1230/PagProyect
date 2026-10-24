@@ -7,6 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   const password = document.getElementById('password').value.trim();
   const errorMessage = document.getElementById('errorMessage');
 
+  
   // ===== CREDENCIALES (para prototipo) =====
   const USUARIO_VALIDO = 'jeremy';
   const PASSWORD_VALIDA = '1234';
